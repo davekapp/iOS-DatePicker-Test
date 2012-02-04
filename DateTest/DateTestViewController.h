@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DateTestViewController : UIViewController
+#import "DateChooserViewController.h"
 
+@interface DateTestViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *outputLabel;
+@property (nonatomic) Boolean dateChooserVisible;
+
+- (IBAction)showDateChooserModal:(id)sender;
+- (IBAction)showDateChooserPopover:(id)sender;
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+- (NSTimeInterval)intervalBetweenTodayAndDate:(NSDate *)aDate;
+- (void)calculateDateDifferenceUsingDate:(NSDate *)aDate;
 @end

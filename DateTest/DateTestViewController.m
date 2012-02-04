@@ -9,6 +9,8 @@
 #import "DateTestViewController.h"
 
 @implementation DateTestViewController
+@synthesize outputLabel;
+@synthesize dateChooserVisible = _dateChooserVisible;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +28,7 @@
 
 - (void)viewDidUnload
 {
+    [self setOutputLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -59,6 +62,45 @@
   } else {
       return YES;
   }
+}
+
+- (IBAction)showDateChooserModal:(id)sender {
+  if (self.dateChooserVisible != YES) {
+    self.dateChooserVisible = YES;
+    [self performSegueWithIdentifier:@"dateChooserModal" sender:self];
+  }  
+}
+
+- (IBAction)showDateChooserPopover:(id)sender {
+  if (self.dateChooserVisible != YES) {
+    self.dateChooserVisible = YES;
+    [self performSegueWithIdentifier:@"dateChooserPopover" sender:self];
+  }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  ((DateChooserViewController*)segue.destinationViewController).delegate = self;
+}
+
+- (NSTimeInterval)intervalBetweenTodayAndDate:(NSDate *)aDate {
+  NSDate *now = [NSDate date];
+  NSTimeInterval interval = [now timeIntervalSinceDate:aDate];
+  return interval;
+}
+
+- (void)calculateDateDifferenceUsingDate:(NSDate *)aDate {
+  NSTimeInterval interval = [self intervalBetweenTodayAndDate:aDate];
+  NSTimeInterval intervalInDays = interval / 86400; // seconds in a day
+  NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+  [dateFormat setDateFormat:@"MMMM d, yyyy hh:mm:ssa"];
+  
+  NSString *outputText = [[NSString alloc] 
+                          initWithFormat:@"Difference between chosen date %@ and today %@ in days: %1.2f",
+                          [dateFormat stringFromDate:[NSDate date]],
+                          [dateFormat stringFromDate:aDate],
+                          fabs(intervalInDays)];
+  
+  self.outputLabel.text = outputText;
 }
 
 @end

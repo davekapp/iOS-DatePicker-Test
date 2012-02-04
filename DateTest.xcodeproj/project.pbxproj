@@ -24,6 +24,7 @@
 		4EB6886914DCF34B00B775F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EB6886714DCF34B00B775F1 /* InfoPlist.strings */; };
 		4EB6886B14DCF34B00B775F1 /* DateTestTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4EB6886A14DCF34B00B775F1 /* DateTestTests.h */; };
 		4EB6886D14DCF34B00B775F1 /* DateTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6886C14DCF34B00B775F1 /* DateTestTests.m */; };
+		4EE4849714DCF57500E6B4FC /* DateChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4849614DCF57500E6B4FC /* DateChooserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +42,11 @@
 		4EB6883B14DCF34B00B775F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EB6883D14DCF34B00B775F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EB6883F14DCF34B00B775F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4EB6884314DCF34B00B775F1 /* DateTest-Info.plist */ = {isa = PBXFileReference; path = "DateTest-Info.plist"; sourceTree = "<group>"; };
+		4EB6884314DCF34B00B775F1 /* DateTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DateTest-Info.plist"; sourceTree = "<group>"; };
 		4EB6884514DCF34B00B775F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EB6884714DCF34B00B775F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4EB6884914DCF34B00B775F1 /* DateTest-Prefix.pch */ = {isa = PBXFileReference; path = "DateTest-Prefix.pch"; sourceTree = "<group>"; };
-		4EB6884A14DCF34B00B775F1 /* DateTestAppDelegate.h */ = {isa = PBXFileReference; path = DateTestAppDelegate.h; sourceTree = "<group>"; };
+		4EB6884914DCF34B00B775F1 /* DateTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DateTest-Prefix.pch"; sourceTree = "<group>"; };
+		4EB6884A14DCF34B00B775F1 /* DateTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTestAppDelegate.h; sourceTree = "<group>"; };
 		4EB6884B14DCF34B00B775F1 /* DateTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTestAppDelegate.m; sourceTree = "<group>"; };
 		4EB6884E14DCF34B00B775F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4EB6885114DCF34B00B775F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
@@ -53,10 +54,12 @@
 		4EB6885514DCF34B00B775F1 /* DateTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTestViewController.m; sourceTree = "<group>"; };
 		4EB6885C14DCF34B00B775F1 /* DateTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB6885D14DCF34B00B775F1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4EB6886614DCF34B00B775F1 /* DateTestTests-Info.plist */ = {isa = PBXFileReference; path = "DateTestTests-Info.plist"; sourceTree = "<group>"; };
+		4EB6886614DCF34B00B775F1 /* DateTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DateTestTests-Info.plist"; sourceTree = "<group>"; };
 		4EB6886814DCF34B00B775F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EB6886A14DCF34B00B775F1 /* DateTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTestTests.h; sourceTree = "<group>"; };
 		4EB6886C14DCF34B00B775F1 /* DateTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTestTests.m; sourceTree = "<group>"; };
+		4EE4849514DCF57500E6B4FC /* DateChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateChooserViewController.h; path = ../DateChooserViewController.h; sourceTree = "<group>"; };
+		4EE4849614DCF57500E6B4FC /* DateChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateChooserViewController.m; path = ../DateChooserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		4EB6884114DCF34B00B775F1 /* DateTest */ = {
 			isa = PBXGroup;
 			children = (
+				4EE4849514DCF57500E6B4FC /* DateChooserViewController.h */,
+				4EE4849614DCF57500E6B4FC /* DateChooserViewController.m */,
 				4EB6884A14DCF34B00B775F1 /* DateTestAppDelegate.h */,
 				4EB6884B14DCF34B00B775F1 /* DateTestAppDelegate.m */,
 				4EB6884D14DCF34B00B775F1 /* MainStoryboard_iPhone.storyboard */,
@@ -202,6 +207,9 @@
 /* Begin PBXProject section */
 		4EB6882E14DCF34B00B775F1 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 4EB6883114DCF34B00B775F1 /* Build configuration list for PBXProject "DateTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -267,6 +275,7 @@
 				4EB6884814DCF34B00B775F1 /* main.m in Sources */,
 				4EB6884C14DCF34B00B775F1 /* DateTestAppDelegate.m in Sources */,
 				4EB6885614DCF34B00B775F1 /* DateTestViewController.m in Sources */,
+				4EE4849714DCF57500E6B4FC /* DateChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +455,7 @@
 				4EB6887214DCF34B00B775F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EB6887314DCF34B00B775F1 /* Build configuration list for PBXNativeTarget "DateTestTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +464,7 @@
 				4EB6887514DCF34B00B775F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
